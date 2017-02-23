@@ -1,0 +1,30 @@
+{
+  "name": "Depositbox",
+  "productName": "Depositbox",
+  "identifier": "com.depositbox",
+  "description": "Depositbox",
+  "version": "0.4.0",
+  "author": "Depositbox <depositbox.cc@gmail.com>",
+  "main": "main.js",
+  "config": {
+    "target": "release",
+    "versionCheckURL": "https://raw.githubusercontent.com/xslugx/depositbox/master/package.json"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/.bin/electron-rebuild -w @paulcbetts/system-idle-time -p"
+  },
+  "dependencies": {
+    "@paulcbetts/system-idle-time": "^1.0.4",
+    "auto-launch": "^1.1.1",
+    "electron-rebuild": "^1.2.1",
+    "electron-safe-ipc": "^0.6.1",
+    "fs-jetpack": "^0.7.1",
+    "mixpanel": "^0.3.2",
+    "open": "^0.0.5",
+    "rcedit": "^0.7.0",
+    "sudo-prompt": "^1.1.7",
+    "terminate": "^1.0.6",
+    "tree-kill": "^0.1.1",
+    "yargs": "^3.15.0"
+  }
+}
