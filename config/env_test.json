@@ -1,0 +1,6 @@
+{
+	"name": "test",
+	"showDevTools": false,
+	"description": "Add here any environment specific stuff you like.",
+	"configFileName": "settings.json"
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Depositbox</title>
+
+<head>
+	<link href="lib/css/bootstrap.min.css" rel="stylesheet">
+	<link href="lib/css/style.css" rel="stylesheet">
+	<link href="lib/css/bootstrap-tour.min.css" rel="stylesheet">
+	<link href="lib/css/fonts.css" rel="stylesheet">
+	<link href="lib/ladda/ladda-themeless.min.css" rel="stylesheet">
+	<link href="lib/css/custom.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<script>
+function call(no, value) {
+		if (no == 0) {
+			document.getElementById('noLaunch').checked = false
+			document.getElementById('LaunchAndMine').checked = false;
+		} else if (no == 1) {
+			document.getElementById('LaunchOnBoot').checked = false
+			document.getElementById('noLaunch').checked = false;
+		} else if (no == 2) {
+			document.getElementById('LaunchOnBoot').checked = false
+			document.getElementById('LaunchAndMine').checked = false;
+		}
+	}
+
+	$("#modalLove").modal('hide');
+
+	function showYourLove() {
+		$("#modalLove").modal('show');
+	}
+
+	function sendReferralEmail() {
+		require('shell').openExternal('mailto:?subject=' + encodeURIComponent("Invest with Depositbox!") + "&body=" + encodeURIComponent("Invest with Depositbox and invest with trust! https://depositbox.cc"));
+	}
+
+</script>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8 col-sm-push-2 col-md-6 col-md-push-3">
+				<header>
+					<div class="row">
+						<div class="col-xs-4">
+							<h2 class="title">
+                  <a href="https://Depositbox.cc/" class="js-external-link">Depositbox</a>
+                </h2>
+						</div>
+						<div class="col-xs-8 text-right">
+							<svg id="heartIcon" width="30px" height="27px" viewBox="0 0 30 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-alignment="inside" onclick="showYourLove()">
+							    <path d="M15.0235476,8.17988474 C15.245938,7.40871582 17.0132996,2 22.837198,2 C29.1081492,2 29.8920181,8.27095118 29.8920181,8.27095118 C29.8920181,8.27095118 32.2367313,19.9945176 15.0742658,28.6135807 L15.0743124,28.6515425 C15.0616479,28.6452303 15.0489939,28.6389165 15.0363505,28.632601 C15.0237471,28.6389165 15.0111333,28.6452303 14.998509,28.6515425 L14.998509,28.6136782 C-2.2188641,19.9946059 0.104999968,8.27095118 0.104999968,8.27095118 C0.104999968,8.27095118 0.888869066,2 7.15982024,2 C12.9837187,2 14.7949083,7.40871582 15.0235476,8.17988474 Z" sketch:type="MSShapeGroup"></path>
+							</svg>
+						</div>
+					</div>
+				</header>
+
+				<div class="tab-content">
+					<section class="main">
+						<div class="row">
+							<div class="form-group col-xs-12">
+								<label class="control-label" for="emailField">Depositbox.cc Email Address</label>
+								<input class="form-control address input-address" data-error="Email address is required" id="emailField" placeholder="Enter your Email here" required="" type="text" required>
+							</div>
+						</div>
+						<div class="row">
+							<br />
+							<br />
+							<br />
+						</div>
+					</section>
+				</div>
+				<div>
+					<section class="action">
+						<div class="row">
+							<div class="btn-group btn-group-justified" role="group">
+								<div class="btn-group custom1" role="group">
+									<button type="button" class="btn btn-danger" id="startButton">START</button>
+								</div>
+								<div class="btn-group dropup">
+									<div id="app-settings" class="btn-group dropup" role="group">
+										<button id="appButton" role="button" class="btn btn-primary btn-settings dropdown-toggle custom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<i class="fa icon-cog"></i>
+										</button>
+										<div id="btn-settings" class="dropdown-menu" role="tablist">
+											<li class="dropdown-header text-center">Basic Settings</li>
+											<!--	 <label for="MinToTask">
+												<input id="MinToTask" type="checkbox"> Minimize to Tray
+											</label>-->
+											
+											<li role="separator" class="divider"></li>
+											<li class="dropdown-header text-center">Startup Settings</li>
+											<label for="LaunchOnBoot">
+													<input id="LaunchOnBoot" name="login" type="checkbox" onclick="call(0,this)"> Open on Login
+											</label>
+											
+											<label for="noLaunch">
+													<input id="noLaunch" name="Neither" type="checkbox" class="nolaunch" onclick="call(2,this)"> Neither
+											</label>
+											
+											</div>
+									</div>
+								</div>
+							</div>
+							<div class="progress">
+								<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemax="100" style="width:100%"><span class="show"></span>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+
+				<footer>
+					<div class="row tour-media">
+						<div class="col-xs-4 text-left">
+							<a target="_blank" href="https://twitter.com/steam_pool" class="js-external-link">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000" width="100" height="100">
+									<path id="tw" d="M112.5,748.5c57.3,5,112.2-2.8,164.8-25.5c25.3-10.9,60.4-32,69.1-41.6c-2-0.2-3.8-0.4-5.5-0.6c-1.6-0.2-3.2-0.5-4.9-0.6 			c-18.1-1.4-35.3-6.1-51.7-13.8c-40-18.9-68-49.1-83.9-90.6c-0.7-1.9-1.2-3.8-2.1-6.3c6.3,0.6,11.9,1.3,17.5,1.7 			c5.9,0.4,11.8,0.8,17.7,0.6c5.7-0.1,11.4-0.8,17-1.6c5.6-0.8,11.2-1.9,17.3-3c-1.5-1.8-3-2-4.4-2.4 			c-49.5-13.3-85.3-43.1-107.2-89.3c-9.4-19.8-14-40.8-14.4-62.7c0-1.7,0.2-3.5,0.3-5.8c6.1,2.8,11.5,5.5,17.1,7.7 c5.7,2.2,11.5,4.2,17.3,5.9c5.7,1.6,11.5,2.9,17.3,3.9c5.9,1,11.9,2.3,18.8,1.7c-2.8-2.9-5.7-4.4-8.1-6.5c-2.7-2.2-5.4-4.4-8-6.7 			c-2.4-2.2-4.8-4.4-7.1-6.8c-2.3-2.3-4.5-4.7-6.7-7.2c-2.3-2.6-4.5-5.3-6.6-8c-2-2.6-3.9-5.2-5.7-7.9c-1.8-2.7-3.6-5.5-5.2-8.3 			c-1.7-3-3.4-6-5-9.1c-1.5-2.9-2.9-5.9-4.2-8.8c-1.3-3-2.5-6-3.6-9.1c-1.2-3.3-2.2-6.6-3.2-9.9c-0.9-3.1-1.7-6.3-2.4-9.5 			c-0.7-3.2-1.4-6.4-1.9-9.6c-0.6-3.4-1-6.9-1.3-10.3c-0.3-3.2-0.4-6.5-0.5-9.8c-0.1-3.3-0.1-6.5,0-9.8c0.1-3.5,0.1-6.9,0.4-10.4 			c0.3-3.3,0.7-6.5,1.2-9.7c0.5-3.2,1.2-6.4,1.9-9.6c0.8-3.4,1.6-6.7,2.5-10.1c0.9-3.1,1.8-6.3,2.9-9.3c1.1-3.1,2.3-6.1,3.5-9.1 			c1.4-3.2,2.8-6.3,4.3-9.4c1.4-2.9,3.1-5.7,4.6-8.5c2.4,0.8,3.4,2.7,4.7,4.3c29.8,35.4,64,65.7,102.9,90.8 			c45.1,29.1,93.8,49.7,146.2,61.5c13.5,3,27.1,5.7,40.9,7.2c10.1,1.1,20.3,2.2,30.4,3.2c2,0.2,4,0.5,6.3-0.3 			c-7.9-39-3.7-76.4,15.1-111.6c15.6-29.2,38.3-51.5,67.7-67c57.9-30.6,137.5-24.2,192.1,32.4c8.8-1.3,17.6-3.6,26.4-6.3 			c8.6-2.6,17.1-5.3,25.5-8.5c8.6-3.3,17-6.9,25.3-10.8c8-3.8,15.8-8.1,23.9-12.2c-1,10.3-13.5,34.3-25.7,49.7 			c-11.6,14.7-25.4,26.9-41,37.5c30.5-3.3,59.5-11.6,87.4-23.6c1.3,1,0.3,1.6,0,2.3c-0.3,0.7-0.9,1.4-1.3,2 			c-13,18.6-27.7,35.8-44.3,51.4c-10.1,9.5-20.8,18.4-32.4,26.8c0,1.4,0,3,0,4.6c0,3.3,0.1,6.5,0.1,9.8 			c0.8,48.8-6.7,96.4-21.3,142.8c-18.6,59.2-47.3,113.2-87.1,161c-60.6,73-136.8,121.8-228.9,145.5c-16.4,4.2-33,7.3-49.7,9.8 			c-30.6,4.6-61.3,5.5-92.2,4.5c-12-0.4-24-1.7-35.9-3.2c-21.5-2.7-42.6-6.9-63.5-12.6c-42.5-11.7-82.5-29.2-120-52.4 			C115,750.4,113.8,749.4,112.5,748.5z"
+									/>
+								</svg>
+							</a>
+						</div>
+						<div class="col-xs-4 text-center">
+						<a href="https://discord.gg/qGCS8up" class="js-external-link"><img src="images/Discord.png" alt="Discord"></a>
+						<!-- <script async defer src="https://steampool.herokuapp.com/slackin.js"></script> -->
+						</div>
+						<div class="col-xs-4 text-right">
+							<p><a href="https://depositbox.freshdesk.com/support/tickets/new" class="js-external-link">Need Help?</a></p>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade text-center" id="modalSetupLinux" tabindex="-1" role="dialog" aria-labelledby="modalSetup">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Welcome to Depositbox</h4>
+				</div>
+				<div class="modal-body">
+					<p>Your password is required for first time setup, please input your user password:</p>
+					<div class="row">
+						<div class="col-lg-4 col-lg-offset-4">
+							<div class="input-group">
+								<input id="linuxPassword" class="form-control input-lg" type="password" placeholder="Password" autofocus>
+							</div>
+							<br>
+							<div class="btn-group">
+								<button type="button" class="btn btn-blue" onclick="requirejs('./modules/setup').setupLinux();">Submit</button>
+							</div>
+						</div>
+						<!-- /.col-lg-4 -->
+					</div>
+					<!-- /.row -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade text-center" id="modalUpdateAvailable" tabindex="-1" role="dialog" aria-labelledby="modalUpdateAvailable">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Update Depositbox</h4>
+				</div>
+				<div class="modal-body">There is an update available, would you like to download the update now?</div>
+				<div class="modal-footer">
+					<div class="btn-group">
+						<button id="update" type="button" class="btn btn-blue" data-dismiss="modal" onclick="require('shell').openExternal('http://bit.ly/steampoolupdate')">Yes</button>
+						<button type="button" class="btn btn-blue" data-dismiss="modal">No</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade text-center" id="modalNoUpdateAvailable" tabindex="-1" role="dialog" aria-labelledby="modalNoUpdateAvailable">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">No Update Available</h4>
+				</div>
+				<div class="modal-body" id="updateContents">You are already using the latest version.</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-blue" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade text-center" id="modalAbout" tabindex="-1" role="dialog" aria-labelledby="modalAbout">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">About Depositbox</h4>
+				</div>
+				<div class="modal-body" id="modalAboutBody">
+
+					<!--Contents are populated by ./modules/about.js-->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade text-center" id="modalChange" tabindex="-1" role="dialog" aria-labelledby="modalAbout">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Changelog</h4>
+				</div>
+				<div class="modal-body" id="modalChangeBody">
+
+					<!--Contents are populated by ./modules/about.js-->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade text-center" id="modalChat" tabindex="-1" role="dialog" aria-labelledby="modalAbout">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Discord</h4>
+				</div>
+				<div class="modal-body" id="modalChatBody">
+
+					<!--Contents are populated by ./modules/about.js-->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade text-center" id="modalPayout" tabindex="-1" role="dialog" aria-labelledby="modalAbout">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Withdraw</h4>
+				</div>
+				<div class="modal-body" id="modalPayoutBody">
+
+					<!--Contents are populated by ./modules/about.js-->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	<div class="modal fade text-center" id="modalLove" tabindex="-1" role="dialog" aria-labelledby="modalLove">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Show Your Love</h4>
+				</div>
+				<div class="modal-body">
+					If you love Depositbox, let others know using the social media links below!<br>
+					<!-- Facebook Link -->
+					<!--<iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fsteampool.com&layout=button&mobile_iframe=false&appId=151044112258&width=58&height=20" width="58" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>-->
+					<a href="#" onclick="require('shell').openExternal('https://www.facebook.com/sharer/sharer.php?u=https://depositbox.cc&t=Depositbox');"title="Share on Facebook">Share on Facebook</a><div style="display:block;width:100%;height:5px;margin:0;padding:0;"></div>
+					<!-- Twitter Link -->
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://depositbox.cc" data-text="Invest with Depositbox and invest with trust!">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script><br>
+					<!-- Instagram Link -->
+					<style>.ig-b- { display: inline-block; }
+					.ig-b- img { visibility: hidden; }
+					.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+					.ig-b-v-24 { width: 137px; height: 24px; background: url(http://badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; }
+					@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+					.ig-b-v-24 { background-image: url(http://badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }</style>
+					<a href="#" onclick="require('shell').openExternal('https://www.instagram.com/steam_pool/?ref=badge')" class="ig-b- ig-b-v-24"><img src="http://badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+					<!-- Email Link -->
+					<!-- <a href="#" onclick="sendReferralEmail()">Share via Email</a> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="lib/LAB.min.js"></script>
+<script type="text/javascript" src="lib/ladda/spin.min.js"></script>
+<script type="text/javascript" src="lib/ladda/ladda.min.js"></script>
+<script>
+	$LAB
+		.script("lib/jquery-1.11.3.min.js")
+		.wait(function() { // init jQuery before require
+			window.$ = window.jQuery = module.exports;
+		})
+		.script("lib/require.js")
+		.script("lib/bootstrap.min.js")
+		.script("lib/electron_boilerplate/env_config.js")
+		.script("lib/electron_boilerplate/context_menu.js")
+		.script("lib/electron_boilerplate/external_links.js")
+		.script("lib/bootstrap-tour.min.js")
+		.wait(function() { // init order is very important bellow
+			requirejs([
+				'./modules/about',
+				'./modules/mine',
+				'./modules/updater',
+				'./modules/twitch',
+				'./modules/tour',
+				'./modules/changelog',
+				'./modules/chat',
+				'./modules/payout'
+			], function(about, mine, updater, twitch, tour, changelog, chat, payout) {
+				about.init();
+				mine.init();
+				updater.init();
+				twitch.init();
+				tour.init();
+				changelog.init();
+				chat.init();
+				payout.init();
+			});
+		});
+
+</script>
+
+</html>

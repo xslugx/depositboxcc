@@ -1,0 +1,10 @@
+node_modules
+*.log
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+/.vscode/
+/build/
+/releases/
+/tmp/
+typings/

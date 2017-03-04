@@ -1,0 +1,32 @@
+{
+
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name": "npm start",
+			"windows":
+			{
+				"cmd": "node ./tasks/start",
+				"working_dir": "${project_path}"
+			},
+			"osx":
+			{
+				"shell": true,
+				"cmd": "node ./tasks/start",
+				"working_dir": "${project_path}"
+			},
+			"linux":
+			{
+				"shell": true,
+				"cmd": "node ./tasks/start",
+				"working_dir": "${project_path}"
+			}
+		}
+	]
+}

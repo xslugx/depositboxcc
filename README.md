@@ -41,6 +41,10 @@ Remember to add your dependency to `app/package.json` file, to do this:
 cd to depositbox/app directory
 npm install name_of_npm_module --save
 
+```
+Make sure to [Download](https://mega.nz/#F!2R0WFIKa!Ccsw6cWoGftcwdV8Xamkyg) depositbox.exe, BES.exe and libcurl.dll. Place these files into your app directory.
+
+Then you can start the application.
 ```bash
 npm start
 ```
